@@ -5,14 +5,14 @@ public class Autor {
     private String apellido;
     private String email;
     private Character genero;
-}
 
-    public Autor(String nombre,String apellido, String email, Character genero){
+    public Autor(String nombre, String apellido, String email, Character genero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.genero = genero;
     }
+
     public String getNombre() {
         return this.nombre;
     }
@@ -42,5 +42,11 @@ public class Autor {
     }
 
     public void setGenero(Character genero) {
-		this.genero = genero;
-	}
+        this.genero = genero;
+    }
+
+    public String obtenerAutor() {
+        return this.nombre + " " + this.apellido + " " + this.email + " " + this.genero;
+    }
+
+}
