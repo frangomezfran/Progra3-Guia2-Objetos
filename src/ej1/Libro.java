@@ -4,7 +4,14 @@ public class Libro {
     private String titulo;
     private double precio;
     private int stock;
-    private Autor autores[] = new Autor[4];
+    private String autores;;
+
+    public Libro(String titulo, double precio, int stock, String autores) {
+        this.titulo = titulo;
+        this.precio = precio;
+        this.stock = stock;
+        this.autores = autores;
+    }
 
     public String getTitulo() {
         return this.titulo;
@@ -29,6 +36,8 @@ public class Libro {
     public void setStock(int stock) {
         this.stock = stock;
     }
-    
 
+    public String obtenerLibro() {
+        return this.titulo + " " + this.precio + " " + this.stock + " " + this.autores;
+    }
 }
