@@ -4,14 +4,15 @@ public class Libro {
     private String titulo;
     private double precio;
     private int stock;
-    private Autor autores;
+    private Autor[] autores;
 
-    public Libro(String titulo, double precio, int stock, Autor autores) { /// hacer foreach para cargar arreglo de
+    public Libro(String titulo, double precio, int stock, Autor[] autores) { /// hacer foreach para cargar arreglo de
                                                                            /// autores
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
-        this.autores = autores;
+        this.autores=autores;
+
     }
 
     public String getTitulo() {
@@ -39,6 +40,13 @@ public class Libro {
     }
 
     public String obtenerLibro() {
-        return this.titulo + " " + this.precio + " " + this.stock + " " + this.autores;
+
+        String stringsDeAutores = "";
+
+        for(Autor variable : autores){
+            stringsDeAutores = stringsDeAutores + ", "  + variable.getNombre() ;
+        }
+
+        return "El libro, "+ this.titulo + " de" + stringsDeAutores + ". Se vende a "+ this.precio + "$" ;
     }
 }

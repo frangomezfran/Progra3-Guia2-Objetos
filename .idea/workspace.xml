@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65501b06-f2cd-46c3-be50-a00a58eb4dac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Abstractas/Abstractas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Abstractas/src/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Abstractas/src/Mamifero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Clase2Lab3/Clase2Lab3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Guia2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Herencia/Herencia.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Herencia/src/Hija.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Herencia/src/Hija2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Herencia/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Herencia/src/Padre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectosLab2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cruzadas/cruzadas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cruzadas/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cruzadas/src/Tabla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ej1/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ej1/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qzP4DqREiLvfMXJFgGRjNgdfVV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Guia-2-Objetos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65501b06-f2cd-46c3-be50-a00a58eb4dac" name="Default Changelist" comment="" />
+      <created>1618079254405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618079254405</updated>
+    </task>
+    <servers />
+  </component>
+</project>
