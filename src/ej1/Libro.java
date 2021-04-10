@@ -4,9 +4,10 @@ public class Libro {
     private String titulo;
     private double precio;
     private int stock;
-    private String autores;;
+    private Autor autores;
 
-    public Libro(String titulo, double precio, int stock, String autores) {
+    public Libro(String titulo, double precio, int stock, Autor autores) { /// hacer foreach para cargar arreglo de
+                                                                           /// autores
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
