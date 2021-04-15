@@ -46,7 +46,7 @@ public class Autor {
     }
 
     public String obtenerAutor() {
-        return this.nombre + " " + this.apellido + " " + this.email + " " + this.genero;
+        return "Nombre: "+this.nombre + " | Apellido:" + this.apellido + " | E-mail: " + this.email + " | Genero: " + this.genero;
     }
 
 }

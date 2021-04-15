@@ -1,5 +1,7 @@
 package ej1;
 
+import java.lang.reflect.Array;
+
 public class Libro {
     private String titulo;
     private double precio;
@@ -23,6 +25,12 @@ public class Libro {
         this.titulo = titulo;
     }
 
+    public void setAutores(Autor[] autor){
+
+        this.autores=autor;
+
+    }
+
     public double getPrecio() {
         return this.precio;
     }
@@ -39,11 +47,11 @@ public class Libro {
         this.stock = stock;
     }
 
-    public String obtenerLibro() {
+    public String obtenerLibro() { //Obtener libro hace mas de 1 cosa, habria q hacer el for en otro metodo
 
         String stringsDeAutores = "";
 
-        for(Autor variable : autores){
+        for(Autor variable : this.autores){
             stringsDeAutores = stringsDeAutores + ", "  + variable.getNombre() ;
         }
 
