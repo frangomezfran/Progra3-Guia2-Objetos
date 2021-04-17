@@ -6,55 +6,78 @@ public class Libro {
     private String titulo;
     private double precio;
     private int stock;
-    private Autor[] autores;
+    private Autor autor;
+    private Autor[] autoresSecundarios = new Autor[5];
+    /*
+    * La forma que se me ocurrio de resolver el problema de tener Autores como objeto de 1 cantidad y
+    * tener Autores como si fuera una lista (Todavia no vi ArrayList) es hacer un Array de autoresSecundarios
+    * en este caso si el libro los tiene, se agregaran con addAutoresSecundarios. Y no me saldria agregar un
+    * fucking elemento en la ultima celda, no estaria utilizando correctamente el metodo .length()
+    * */
 
-    public Libro(String titulo, double precio, int stock, Autor[] autores) { /// hacer foreach para cargar arreglo de
-                                                                           /// autores
+    public Libro(String titulo, double precio, int stock, Autor autor) {
         this.titulo = titulo;
         this.precio = precio;
         this.stock = stock;
-        this.autores=autores;
-
+        this.autor = autor;
     }
 
+
+    // --------------------------- TITULO ---------------------------
     public String getTitulo() {
         return this.titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public void setAutores(Autor[] autor){
+    // --------------------------- AUTOR ---------------------------
+    public Autor getAutor(){
+        return this.autor;
+    }
+    public void setAutor(Autor autor){
+        this.autor=autor;
+    }
 
-        this.autores=autor;
+    // --------------------------- AutoresSecundarios ---------------------------
+    public Autor[] getAutoresSecundarios(){
+        return this.autoresSecundarios;
+    }
+    public void addAutoresSecundarios(Autor autorSecundario)
+    {
+
+        this.autoresSecundarios[0] = autorSecundario;
 
     }
 
+    // --------------------------- PRECIO ---------------------------
     public double getPrecio() {
         return this.precio;
     }
-
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
+    // ---------------------------STOCK---------------------------
     public int getStock() {
         return this.stock;
     }
-
     public void setStock(int stock) {
         this.stock = stock;
     }
 
-    public String obtenerLibro() { //Obtener libro hace mas de 1 cosa, habria q hacer el for en otro metodo
 
-        String stringsDeAutores = "";
+    // --------------------------- METODOS ---------------------------
+    public String obtenerLibro() {
 
-        for(Autor variable : this.autores){
-            stringsDeAutores = stringsDeAutores + ", "  + variable.getNombre() ;
+        String stringsDeAutores = this.autor.getNombre() + " " + this.autor.getApellido();
+
+        if( this.autoresSecundarios.length != 1 ) {
+            for (Autor aux : this.autoresSecundarios) {
+                stringsDeAutores = stringsDeAutores + ", " + aux.getNombre() + " " +aux.getApellido() ;
+            }
         }
 
-        return "El libro, "+ this.titulo + " de" + stringsDeAutores + ". Se vende a "+ this.precio + "$" ;
+        return "El libro, "+ this.titulo + " de " + stringsDeAutores + ". Se vende a "+ this.precio + "$" ;
     }
 }

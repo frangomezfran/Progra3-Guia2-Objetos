@@ -7,23 +7,34 @@ public class Main {
 
         //Creamos un array de objetos de la clase Autor
         Autor joshuaBloch = new Autor("Joshua", "Bloch", "joshua@email.com",'M');//A
-        Autor arregloAutores[] = new Autor[3];
 
-        System.out.println("Obteniendo a Joshua :\n"+joshuaBloch.obtenerAutor());//B
+        System.out.println("Inciso B: "+joshuaBloch.obtenerAutor());//B
 
-        Libro libro = new Libro("Effective Java",450, 150,joshuaBloch);//C
+        Libro libroJava = new Libro("Effective Java",450, 150,joshuaBloch);//C
 
-        //Creamos objetos en cada posicion
-        arregloAutores[0] = joshuaBloch;/// Hacer arreglo de Autores, para cargar el arreglo de la clase libros
-        arregloAutores[1] = new Autor("Juan","Haag","apetroxtrm@gmail.com",'M');
-        arregloAutores[2] = new Autor("Franco","Gomez","frangomez0566@gmail.com",'M');
+        System.out.println("Inciso D: "+libroJava.obtenerLibro());//D
 
-        //Ponemos el arreglo de autores en un libro
-        libro.setAutores(arregloAutores);
+        libroJava.setPrecio(500);//E
+        libroJava.setStock(500); //E
 
+        System.out.println("Inciso F: "+ libroJava.getAutor().getNombre()+" "+libroJava.getAutor().getApellido());//F
 
-        System.out.print(libro.obtenerLibro());
-        libro.setPrecio(500);
-        libro.setStock(50);
+        System.out.println("Inciso G: "+libroJava.obtenerLibro());//G
+
+        //Instancio un arreglo de autores
+        Autor[] arregloAutoresSecundarios = new Autor[2]; //H
+
+        //Cargo el arreglo
+        arregloAutoresSecundarios[0] = new Autor("Juan","Haag","apetroxtrm@gmail.com",'M');
+        //arregloAutoresSecundarios[1] = new Autor("Franco","Gomez","frangomez0566@gmail.com",'M');
+
+        //Cargo los autores secundarios al libro
+        for(Autor aux : arregloAutoresSecundarios) {
+            libroJava.addAutoresSecundarios(aux);
+            System.out.println("Inciso H: "+libroJava.obtenerLibro());
+        }
+
+        //Muestro el libro con sus nuevos autores
+        System.out.print("Inciso H: "+libroJava.obtenerLibro());
     }
 }
