@@ -1,19 +1,23 @@
 package ej1;
 
-import java.lang.reflect.Array;
-
 public class Libro {
     private String titulo;
     private double precio;
     private int stock;
     private Autor autor;
-    private Autor[] autoresSecundarios = new Autor[5];
+    private Autor[] autoresSecundarios = new Autor[4];
+    private int validos = 0 ;
     /*
-    * La forma que se me ocurrio de resolver el problema de tener Autores como objeto de 1 cantidad y
-    * tener Autores como si fuera una lista (Todavia no vi ArrayList) es hacer un Array de autoresSecundarios
-    * en este caso si el libro los tiene, se agregaran con addAutoresSecundarios. Y no me saldria agregar un
-    * fucking elemento en la ultima celda, no estaria utilizando correctamente el metodo .length()
-    * */
+     * La forma que se me ocurrio de resolver el problema de tener Autores como objeto de 1 cantidad y
+     * tener Autores como si fuera una lista (Todavia no vi ArrayList) es hacer un Array de autoresSecundarios
+     * en este caso si el libro los tiene, se agregaran con addAutoresSecundarios. Y no me saldria agregar un
+     * fucking elemento en la ultima celda, no estaria utilizando correctamente el metodo .length()
+     *
+     * Tuve q hacer un validos porq el .length era para la Dimension del array, no los validos . Despues no pude
+     * usar un foreach para concatenar los nombres en stringsDeAutores, solo lo pude hacer con el antiguo for
+     * debe ser una condicion del foreach, quizaa nose, sea solo para recorrer y mostrar porq justamente el recorrido
+     * del foreach es diferente q el anterior. Despues en este ejercicio es Necesario darle la dimension al arreglo .
+     * */
 
     public Libro(String titulo, double precio, int stock, Autor autor) {
         this.titulo = titulo;
@@ -45,9 +49,8 @@ public class Libro {
     }
     public void addAutoresSecundarios(Autor autorSecundario)
     {
-
-        this.autoresSecundarios[0] = autorSecundario;
-
+        this.autoresSecundarios[validos] = autorSecundario;
+        this.validos++;
     }
 
     // --------------------------- PRECIO ---------------------------
@@ -72,9 +75,11 @@ public class Libro {
 
         String stringsDeAutores = this.autor.getNombre() + " " + this.autor.getApellido();
 
-        if( this.autoresSecundarios.length != 1 ) {
-            for (Autor aux : this.autoresSecundarios) {
-                stringsDeAutores = stringsDeAutores + ", " + aux.getNombre() + " " +aux.getApellido() ;
+        if( validos > 1 ) {
+            for (int i = 0; i<validos;i++) {
+
+                stringsDeAutores = stringsDeAutores + ", " + this.autoresSecundarios[i].getNombre() + " " + this.autoresSecundarios[i].getApellido() ;
+
             }
         }
 

@@ -1,4 +1,3 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import ej1.Autor;
 import ej1.Libro;
 
@@ -22,16 +21,15 @@ public class Main {
         System.out.println("Inciso G: "+libroJava.obtenerLibro());//G
 
         //Instancio un arreglo de autores
-        Autor[] arregloAutoresSecundarios = new Autor[2]; //H
+        Autor arregloAutoresSecundarios[] = new Autor[2]; //H
 
         //Cargo el arreglo
         arregloAutoresSecundarios[0] = new Autor("Juan","Haag","apetroxtrm@gmail.com",'M');
-        //arregloAutoresSecundarios[1] = new Autor("Franco","Gomez","frangomez0566@gmail.com",'M');
+        arregloAutoresSecundarios[1] = new Autor("Franco","Gomez","frangomez0566@gmail.com",'M');
 
         //Cargo los autores secundarios al libro
         for(Autor aux : arregloAutoresSecundarios) {
             libroJava.addAutoresSecundarios(aux);
-            System.out.println("Inciso H: "+libroJava.obtenerLibro());
         }
 
         //Muestro el libro con sus nuevos autores
