@@ -66,17 +66,16 @@ public class Main {
                chinos.cargaProductos(new ItemVenta(1,"Pepitos","Galletitas Pepitos 300gr",90));
                chinos.cargaProductos(new ItemVenta(2,"Bizcochos","Galletitas Bizcochos Don Satur 200gr",50));
 
-
+               //Muestro los productos del local
                System.out.println("Lista de productos : \n");
                chinos.muestraProductos();
 
+               //Creo la venta
                Venta ventaFran =  new Venta(franco,chinos);
 
+               //Empezamos a comprar y eligiendo por ID
                int idProductoAcomprar;
-
                System.out.println("\nIngrese ID del producto a comprar : (9 para salir)");
-
-               //Caso donde el usuario no ingrese nada erroneo
                do {
                    idProductoAcomprar=input.nextInt();
                    if(idProductoAcomprar < (chinos.getCantProductos()) && idProductoAcomprar >= 0 ) {
@@ -87,10 +86,9 @@ public class Main {
                    }
                }while(idProductoAcomprar!=9);
 
+               //Generamos la factura y la imprimimos
                System.out.println("A generar la Factura...\n\nFactura : ");
-
                Factura facturaFran = new Factura(franco,ventaFran);
-
                System.out.println(facturaFran.imprimeFacturaCliente());
 
                break;

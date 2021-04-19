@@ -49,10 +49,4 @@ public class ItemVenta {
         this.precioUnitario = precioUnitario;
     }
 
-    //---------------------- Metodos ----------------------
-    public void muestraItems(){
-        System.out.println("1 - Galletitas Pepitos 80$\n2 - Coca-Cola 3l 180$\n3 - Bizcochos Don Satur 50$");
-    }
-
-
 }

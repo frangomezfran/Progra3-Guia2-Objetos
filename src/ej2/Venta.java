@@ -6,9 +6,8 @@ public class Venta {
     private Factura factura;
     private Local local;
     private ItemVenta[] itemAComprar = new ItemVenta[20];
-    private int cantItems = 0; // Con el array list esto se iria
+    private int cantItems = 0; // Con el arraylist esto se iria
 
-    //No me tengo q olvidar de generar la factura luego del la venta
 
     //---------------------- Constructores ----------------------
     public Venta(Cliente cliente,Local local) {
@@ -41,13 +40,11 @@ public class Venta {
     }
 
     //---------------------- Metodos ----------------------
-
     public void haciendoCompra(ItemVenta productoSeleccionado){
         this.itemAComprar[cantItems]=productoSeleccionado;
         cantItems++;
     }
     public double getMontoTotalVentas(){
-
         double montoTotal=0;
         for (int i = 0 ; i < cantItems ; i++) {
             montoTotal+=this.itemAComprar[i].getPrecioUnitario();

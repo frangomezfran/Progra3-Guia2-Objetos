@@ -2,15 +2,14 @@ package ej2;
 
 public class Local {
 
-    private Venta ventas ;
+    private Venta ventas ; // Arraylist de ventas estaria bueno
     private ItemVenta[] productos = new ItemVenta[20];
     private int cantProductos = 0;
 
-    // podria poner aca las facturas de cada cliente, quiza franco
-    // fue 3 veces a comprar, serian 3 facturas para franco
-    // Setear las ventas en cada celda
+    //Donde seria conveniente agregar productos para el local ?
 
 
+    //---------------------- Ventas ----------------------
     public Venta getVentas() {
         return ventas;
     }
@@ -18,7 +17,7 @@ public class Local {
         this.ventas = ventas;
     }
 
-
+    //---------------------- Productos ----------------------
     public ItemVenta[] getProductos() {
         return productos;
     }
@@ -26,7 +25,7 @@ public class Local {
         this.productos = productos;
     }
 
-
+    //---------------------- CantProductos ----------------------
     public int getCantProductos() {
         return cantProductos;
     }
@@ -35,6 +34,7 @@ public class Local {
     }
 
 
+    //---------------------- Metodos ----------------------
     public void cargaProductos(ItemVenta producto){
         this.productos[cantProductos]=producto;
         cantProductos++;

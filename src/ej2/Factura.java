@@ -1,7 +1,6 @@
 package ej2;
 
 import java.time.*;
-import java.util.Date;
 import java.util.UUID;
 
 public class Factura {
@@ -17,7 +16,7 @@ public class Factura {
         this.id = UUID.randomUUID().toString();
         this.fecha = LocalDate.now();
         //Podria hacer el montoTotal en Venta
-        //Pero en Factura en donde hacemos la cuenta del tota, descuento, cuentas, etc
+        //Pero en Factura en donde hacemos la cuenta del total, descuento, cuentas, etc
         this.montoTotal = venta.getMontoTotalVentas();
         this.cliente = cliente;
         this.venta = venta;
