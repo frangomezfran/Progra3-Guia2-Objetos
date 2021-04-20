@@ -1,6 +1,8 @@
 import ej1.*;
 import ej2.*;
+import ej3.*;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.Scanner;
 
 public class Main {
@@ -90,6 +92,25 @@ public class Main {
                System.out.println("A generar la Factura...\n\nFactura : ");
                Factura facturaFran = new Factura(franco,ventaFran);
                System.out.println(facturaFran.imprimeFacturaCliente());
+
+               break;
+
+
+           case 3:
+
+               Duenio nahuel = new Duenio("Nahuel Gomez",'M');//A
+               //System.out.println(nahuel.imprimeCliente());
+
+               CuentaBancaria cuentaNahuel = new CuentaBancaria(10000,nahuel);//B
+
+               cuentaNahuel.menu(input);//C
+
+               Duenio deudor = new Duenio("Pepe Gonzalez",'M');//D
+               CuentaBancariaDeudor cuentaDeudor = new CuentaBancariaDeudor(10000,deudor);
+               cuentaDeudor.menu(input);
+
+               cuentaNahuel.imprimeOperaciones();//E
+               cuentaDeudor.imprimeOperaciones();
 
                break;
 
